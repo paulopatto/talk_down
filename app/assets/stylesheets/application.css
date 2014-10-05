@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+/**
+ * Format to nested ordered list html.
+ * By: http://stackoverflow.com/questions/10405945/html-ordered-list-1-1-1-2-nested-counters-and-scope-not-working
+ */
+OL { counter-reset: item }
+LI { display: block }
+LI:before { content: counters(item, ".") " "; counter-increment: item }

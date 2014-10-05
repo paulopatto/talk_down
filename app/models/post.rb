@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
     post = Post.find(post_id)
     post.replies << self
   end
+
+  def replies?
+    self.replies.count > 0
+  end
 end

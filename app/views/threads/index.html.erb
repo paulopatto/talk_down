@@ -1,5 +1,9 @@
-<ul>
+<ol>
 <% @topics.each do |topic| %>
-  <li><%= topic.title %></li>
+  <li>
+    <%= topic.title %>
+
+    <%= render partial: 'posts', locals: { posts: topic.posts } %>
+  </li>
 <% end %>
-</ul>
+</ol>
