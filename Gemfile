@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.6'
 gem 'sqlite3'
+gem 'simple_form'
+gem 'kaminari'
 
 group :development, :test do
   gem 'spring'
