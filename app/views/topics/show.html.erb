@@ -1,0 +1,5 @@
+<h1> Topic </h1>
+
+<p><%= @topic.title %></p>
+<p><%= @topic.body %></p>
+<%= render partial: 'posts', locals: { posts: @topic.posts } %>

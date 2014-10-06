@@ -1,8 +1,7 @@
 <ol>
-<% @topics.each do |topic| %>
+<% topics.each do |topic| %>
   <li>
     <%= topic.title %>
-
     <%= render partial: 'posts', locals: { posts: topic.posts } %>
   </li>
 <% end %>
