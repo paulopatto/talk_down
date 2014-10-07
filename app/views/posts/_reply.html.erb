@@ -1,0 +1,4 @@
+<%= simple_form_for Post.new, url: reply_post_path(post_id),  html: { class: "form-horizontal" } do |f| %>
+  <%= f.input :body %>
+  <%= f.submit %>
+<% end %>

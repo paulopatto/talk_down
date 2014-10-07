@@ -15,9 +15,13 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :topics do
-
   end
 
+  resources :posts do
+    member do
+      post :reply
+    end
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do
