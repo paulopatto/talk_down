@@ -11,4 +11,8 @@ class Post < ActiveRecord::Base
   def replies?
     self.replies.count > 0
   end
+
+  def to_partial_path
+    "posts/reply"
+  end
 end

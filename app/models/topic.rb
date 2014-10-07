@@ -7,4 +7,8 @@ class Topic < ActiveRecord::Base
   def replies?
     self.posts.count > 0
   end
+
+  def to_partial_path
+    "topics/reply"
+  end
 end
