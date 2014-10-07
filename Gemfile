@@ -4,6 +4,8 @@ gem 'rails', '4.1.6'
 gem 'sqlite3'
 gem 'simple_form'
 gem 'kaminari'
+gem 'dotenv-rails'
+gem 'foreman'
 
 group :development, :test do
   gem 'spring'
@@ -14,4 +16,9 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'thin'
+  gem 'mina'
+end
+
+group :production do
+  gem 'puma'
 end
