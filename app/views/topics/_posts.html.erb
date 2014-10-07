@@ -3,7 +3,7 @@
     <li>
       <%= post.body %>
       <br />
-      <%= render partial: post, locals: { post_id: post.id } %>
+      <%= render partial: post, locals: { post_id: post.id, topic_id: @topic.id } %>
       <br />
       <%= render partial: 'posts' , locals: { posts: post.replies } %>
     </li>

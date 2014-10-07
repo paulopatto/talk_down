@@ -5,10 +5,11 @@ class PostsController < ApplicationController
   end
 
   def reply
-    @post = Post.find(params[:id])
-    reply = Post.new(post_params)
-    @post.replies << reply
-    render nothing: true
+    post = Post.find(params[:id])
+    post.replies << Post.new(post_params)
+
+    topic = Topic.find(params[:topic_id])
+    redirect_to topic
   end
 
   private
