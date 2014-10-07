@@ -13,6 +13,8 @@ set :domain,      'ec2-54-69-17-166.us-west-2.compute.amazonaws.com'
 set :deploy_to,   '/opt/Applications/forum'
 set :repository,  'git@bitbucket.org:paulopatto/talk_down.git'
 set :branch,      'master'
+set :user,        'deploy'
+set :identity_file, 'config/keys/test-r7.pem'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
@@ -40,8 +42,8 @@ task :setup => :environment do
   queue! %[mkdir -p "#{deploy_to}/shared/config"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
 
-  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
+  queue! %[touch "#{deploy_to}/shared/.env"]
+  queue  %[echo "-----> Be sure to edit dotenv file 'shared/.env'."]
 end
 
 desc "Deploys the current version to the server."
@@ -56,7 +58,8 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      queue "touch #{deploy_to}/tmp/restart.txt"
+      # queue "touch #{deploy_to}/tmp/restart.txt"
+      queue "foreman start web"
     end
   end
 end

@@ -18,3 +18,4 @@
 .*.sw?
 .env
 config/database.yml
+config/keys/*.pem
