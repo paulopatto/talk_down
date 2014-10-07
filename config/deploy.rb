@@ -11,7 +11,7 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 set :domain,      'ec2-54-69-17-166.us-west-2.compute.amazonaws.com'
 set :deploy_to,   '/opt/Applications/forum'
-set :repository,  'git@bitbucket.org:paulopatto/talk_down.git'
+set :repository,  'https://paulopatto@bitbucket.org/paulopatto/talk_down.git'
 set :branch,      'master'
 set :user,        'deploy'
 set :identity_file, 'config/keys/test-r7.pem'
