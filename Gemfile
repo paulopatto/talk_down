@@ -7,6 +7,10 @@ gem 'kaminari'
 gem 'dotenv-rails'
 gem 'foreman'
 
+group :assets do
+  gem 'uglifier'
+end
+
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
