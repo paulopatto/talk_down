@@ -1,20 +1,20 @@
-threads 1, 6
-workers 2
+workers Integer(ENV['PUMA_WORKERS'] || 3)
+threads Integer(ENV['MIN_THREADS']  || 1), Integer(ENV['MAX_THREADS'] || 16)
+
 preload_app!
 
-root_path = File.join(File.expand_path('../../../..', __FILE__), 'current')
-directory   root_path
-bind        "unix://#{root_path}/tmp/talk_down.sock"
-pidfile     "#{root_path}/tmp/talk_down.pid"
-state_path  "#{root_path}/tmp/talk_down.state"
-daemonize true
-port 5000
-stdout_redirect "#{root_path}/log/puma.log", "#{root_path}/log/puma.error.log", true
+#root_path = File.join(File.expand_path('../../../..', __FILE__), 'current')
+#directory   root_path
+#bind        "unix://#{root_path}/tmp/talk_down.sock"
+#pidfile     "#{root_path}/tmp/talk_down.pid"
+#state_path  "#{root_path}/tmp/talk_down.state"
+#daemonize true
+port ENV['PORT']
+#stdout_redirect "#{root_path}/log/puma.log", "#{root_path}/log/puma.error.log", true
 
 on_worker_boot do
   require "active_record"
   puts "Booting Puma Server on port 5000..."
-
 
   ActiveSupport.on_load(:active_record) do
     config = ActiveRecord::Base.configurations[Rails.env] ||

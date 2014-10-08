@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-
+ruby '2.1.3'
 gem 'rails', '4.1.6'
-gem 'sqlite3'
 gem 'simple_form'
 gem 'kaminari'
 gem 'dotenv-rails'
@@ -10,9 +9,11 @@ gem 'text'
 
 group :assets do
   gem 'uglifier'
+  gem 'therubyracer'
 end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
@@ -25,6 +26,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'passenger'
+  gem 'puma'
   gem 'pg'
 end
