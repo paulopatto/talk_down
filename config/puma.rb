@@ -2,7 +2,7 @@ threads 1, 6
 workers 2
 preload_app!
 
-root_path = File.expand_path('../../', __FILE__)
+root_path = File.join(File.expand_path('../../..', __FILE__), 'current')
 directory   root_path
 bind        "unix://#{root_path}/tmp/talk_down.sock"
 pidfile     "#{root_path}/tmp/talk_down.pid"
