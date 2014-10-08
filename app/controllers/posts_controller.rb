@@ -6,10 +6,17 @@ class PostsController < ApplicationController
 
   def reply
     post = Post.find(params[:id])
-    post.replies << Post.new(post_params)
-
+    reply = Post.new(post_params)
     topic = Topic.find(params[:topic_id])
-    redirect_to topic
+
+    if reply.valid?
+      post.replies << reply
+
+      redirect_to topic
+    else
+      flash[:erros] << reply.errors.messages
+      redirect_to topic_path(topic)
+    end
   end
 
   private
