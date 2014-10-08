@@ -6,6 +6,7 @@ gem 'simple_form'
 gem 'kaminari'
 gem 'dotenv-rails'
 gem 'foreman'
+gem 'text'
 
 group :assets do
   gem 'uglifier'
