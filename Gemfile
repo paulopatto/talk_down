@@ -25,6 +25,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'puma'
+  gem 'passenger'
   gem 'pg'
 end
