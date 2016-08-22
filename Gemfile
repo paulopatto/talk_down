@@ -17,7 +17,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
-  gem 'pry-meta'
+  gem 'pry-nav'
   gem 'pry-rails'
   gem 'binding_of_caller'
   gem 'better_errors'
