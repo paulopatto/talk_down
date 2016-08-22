@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141001060230) do
 
-  create_table "post_replies", id: false, force: true do |t|
+  create_table "post_replies", id: false, force: :cascade do |t|
     t.integer  "post_id"
     t.integer  "reply_id"
     t.datetime "created_at"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 20141001060230) do
 
   add_index "post_replies", ["post_id", "reply_id"], name: "index_post_replies_on_post_id_and_reply_id", unique: true
 
-  create_table "posts", force: true do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "body"
     t.integer  "topic_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "topics", force: true do |t|
+  create_table "topics", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at"

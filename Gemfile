@@ -19,10 +19,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-nav'
   gem 'pry-rails'
-  gem 'binding_of_caller'
-  gem 'better_errors'
   gem 'thin'
-  gem 'mina'
+  gem 'sqlite3'
 end
 
 group :production do
