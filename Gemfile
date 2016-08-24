@@ -11,6 +11,7 @@ gem 'text'
 
 group :assets do
   gem 'uglifier'
+  gem 'sass-rails'
 end
 
 group :development, :test do
