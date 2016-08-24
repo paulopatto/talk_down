@@ -1,6 +1,6 @@
 <ol>
   <% posts.each do |post| %>
-    <li>
+    <li class='row'>
       <%= post.body %>
       <br />
       <%= render partial: post, locals: { post_id: post.id, topic_id: @topic.id } %>

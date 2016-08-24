@@ -1,5 +1,5 @@
-<%= simple_form_for Post.new, url: reply_post_path(post_id),  html: { class: "form-horizontal" } do |f| %>
+<%= simple_form_for Post.new, url: reply_post_path(post_id),  html: { class: "form-horizontal col-md-8" } do |f| %>
   <%= hidden_field_tag 'topic_id', topic_id %>
-  <%= f.input :body %>
-  <%= f.submit %>
+  <%= f.input :body, class: 'form-group' %>
+  <%= f.submit 'Postar resposta', class: 'btn btn-default' %>
 <% end %>

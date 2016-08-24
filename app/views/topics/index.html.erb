@@ -1,4 +1,10 @@
 <h1>Topics</h1>
-<%= render partial: 'form', locals: { topic: Topic.new } %>
+
+<div class='row'>
+  <%= render partial: 'form', locals: { topic: Topic.new } %>
+</div>
 <hr />
-<%= render partial: 'list', locals: { topics: @topics } %>
+
+<div class='row'>
+  <%= render partial: 'list', locals: { topics: @topics } %>
+</div>

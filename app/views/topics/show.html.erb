@@ -1,8 +1,9 @@
 <h1> Topic </h1>
 
-<h2><%= @topic.title %></h2>
-<p><%= @topic.body %></p>
+<%= react_component 'Topic' %>
 <hr />
 <%= render partial: @topic, locals: { topic_id: @topic.id } %>
 <hr />
-<%= render partial: 'posts', locals: { posts: @topic.posts } %>
+<div class='row'
+  <%= render partial: 'posts', locals: { posts: @topic.posts } %>
+</div>
