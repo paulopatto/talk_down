@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001060230) do
+ActiveRecord::Schema.define(version: 20160917015157) do
 
   create_table "post_replies", id: false, force: :cascade do |t|
     t.integer  "post_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20141001060230) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end
