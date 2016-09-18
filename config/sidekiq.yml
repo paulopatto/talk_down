@@ -6,6 +6,7 @@
   - moderation
 
 production:
+  :service: ""
 
 development:
   :service: 'redis://localhost:6379'
