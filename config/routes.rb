@@ -25,6 +25,9 @@ Rails.application.routes.draw do
       post :reply
     end
   end
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
   # Example resource route with options:
   #   resources :products do
   #     member do

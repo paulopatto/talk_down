@@ -6,6 +6,8 @@ gem 'simple_form'
 gem 'text'
 gem 'kaminari'
 gem 'react-rails'
+gem 'sidekiq'
+gem 'state_machines-activerecord'
 
 group :assets do
   gem 'uglifier'

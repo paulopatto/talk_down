@@ -20,3 +20,4 @@
 config/database.yml
 config/keys/*.pem
 vendor/assets/components/
+config/sidekiq.yml
