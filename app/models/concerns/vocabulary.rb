@@ -1,7 +1,7 @@
 require 'text'
 class Vocabulary
   #TODO: Não seria melhor criar um modelo para manter os termos proibidos?
-  BLACKWORDS =  %w(puta cú gay bicha)
+  BLACKWORDS =  %w(puta gay bicha)
 
   def initialize
     @clean = []
