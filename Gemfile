@@ -12,26 +12,25 @@ group :assets do
   gem 'therubyracer'
 end
 
-group :development, :test, :travis do
+group :development, :test do
   gem 'spring'
 end
 
 group :development do
   gem 'thin'
   gem 'annotate'
-  gem 'pg'
 end
 
 group :development, :test do
   gem 'pry-meta'
   gem 'pry-rails'
+  gem 'sqlite3'
 end
 
-group :test, :travis do
+group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
-  gem 'sqlite3'
 end
 
 group :production, :staging do
