@@ -1,11 +1,16 @@
 class Topic < ActiveRecord::Base
   validates :title, presence: true
   validates :body , presence: true
+  validates :email, presence: true
 
   has_many :posts
 
   def replies?
-    self.posts.count > 0
+    self.replies > 0
+  end
+
+  def replies
+    self.post.count
   end
 
   def to_partial_path

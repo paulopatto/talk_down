@@ -10,4 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require react
+//= require react_ujs
+//= require components
+//= require jquery/dist/jquery.min
+//= require bootstrap/dist/js/bootstrap.min
 //= require_tree .

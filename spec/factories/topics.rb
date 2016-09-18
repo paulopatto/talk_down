@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :topic do
+    email "author@example.org"
     title "Some topic"
     body  "Lorem ipsum dolor amet."
   end
