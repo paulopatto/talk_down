@@ -42,6 +42,9 @@
       "plan": "newrelic:wayne"
     },
     {
+      "plan": "papertrail:choklad"
+    },
+    {
       "plan": "mongolab:shared-single-small",
       "as": "MONGO"
     }
