@@ -1,20 +1,18 @@
-default: &default
-  :service: 'redis://localhost:6379'
-  :logfile: ./log/sidekiq.log
-  :queues:
+---
+:verbose: false
+:concurrency: 10
+:timeout: 30
+:queues:
   - moderation
-
-development:
-  <<: *default
-
-test:
-  <<: *default
-
-qa:
-  <<: *default
 
 production:
   :service: ENV['REDISTOGO_URL']
-  :queues:
-  - moderation
+
+development:
+  :service: 'redis://localhost:6379'
+  :logfile: ./log/sidekiq.log
+
+test:
+  :service: 'redis://localhost:6379'
+  :logfile: ./log/sidekiq.log
 
