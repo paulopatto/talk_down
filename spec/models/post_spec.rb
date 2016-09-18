@@ -1,6 +1,29 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id         :integer          not null, primary key
+#  body       :string
+#  topic_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  state      :string
+#
+
 require 'rails_helper'
 
 describe Post do
+  context 'triggers :moderate! after create' do
+    subject { build(:post) }
+
+    it '' do
+      expect(subject).to receive(:moderate!)
+
+      subject.save
+    end
+  end
+
+
   describe '#reply_to' do
     let(:post) { create(:post) }
     let(:reply) { create(:post, body: 'reply') }
