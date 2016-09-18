@@ -14,10 +14,9 @@ qa:
   <<: *default
 
 production:
-  :service: 'redis://localhost:6379'
+  :service: ENV['REDISTOGO_URL']
   :user: 'admin'
   :password: 'admin'
-  :logfile: ./log/sidekiq.log
   :queues:
   - moderation
 
