@@ -18,7 +18,7 @@ set :identity_file, 'config/keys/test-r7.pem'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['log', '.env']
+set :shared_paths, ['log', '.env', 'tmp']
 
 # Optional settings:
 #   set :user, 'foobar'    # Username in the server to SSH to.
@@ -61,8 +61,8 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      # queue "touch #{deploy_to}/tmp/restart.txt"
-      queue "foreman start web"
+      puts 'Restarting passenger ... '
+      queue "touch #{deploy_to}/tmp/restart.txt"
     end
   end
 end
