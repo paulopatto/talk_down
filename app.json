@@ -1,0 +1,51 @@
+{
+  "name": "TalkDown",
+  "description": "Example Web Forum APP",
+  "keywords": [
+    "rails",
+    "HTML5",
+    "reactjs",
+    "Spelling",
+    "ruby"
+  ],
+  "website": "https://talkdown.herokuapp.com/",
+  "repository": "https://github.com/paulopatto/talk_down",
+  "logo": "https://raw.githubusercontent.com/paulopatto/talk_down/master/public/favicon.ico",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "Performance-M"
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    "openredis",
+    {
+      "plan": "mongolab:shared-single-small",
+      "as": "MONGO"
+    },
+    {
+      "plan": "heroku-postgresql",
+      "options": { "version": "9.5" }
+    }
+  ],
+  "buildpacks": [
+    { "url": "https://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower" },
+    { "url": "https://github.com/dsabanin/rake-db-migrate-buildpack.git" },
+    { "url": "https://github.com/stomita/heroku-buildpack-phantomjs" }
+  ]
+}
