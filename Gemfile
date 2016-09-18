@@ -6,14 +6,15 @@ gem 'simple_form'
 gem 'text'
 gem 'kaminari'
 gem 'react-rails'
+gem 'sidekiq'
+gem 'state_machines-activerecord'
 
 group :assets do
   gem 'uglifier'
   gem 'therubyracer'
 end
 
-group :development, :test, :travis do
-  gem 'sqlite3'
+group :development, :test do
   gem 'spring'
 end
 
@@ -25,9 +26,10 @@ end
 group :development, :test do
   gem 'pry-meta'
   gem 'pry-rails'
+  gem 'sqlite3'
 end
 
-group :test, :travis do
+group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'

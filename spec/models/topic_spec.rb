@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: topics
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  body       :text
+#  created_at :datetime
+#  updated_at :datetime
+#  email      :string
+#  state      :string
+#
+
 require 'rails_helper'
 
 describe Topic do

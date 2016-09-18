@@ -4,5 +4,5 @@
 
 **Build**
 
-- Master: [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=master)](https://travis-ci.org/paulopatto/talk_down)
-- Development: [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=development)](https://travis-ci.org/paulopatto/talk_down)
+- [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=master)](https://travis-ci.org/paulopatto/talk_down) :master
+- [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=development)](https://travis-ci.org/paulopatto/talk_down) :development
