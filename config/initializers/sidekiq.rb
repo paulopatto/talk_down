@@ -3,6 +3,7 @@ $sidekiq = YAML.load(File.read(File.join('config','sidekiq.yml')))[Rails.env.to_
 if ENV['RAILS_ENV'] == 'production'
   $sidekiq[:service] = ENV['REDISTOGO_URL']
 end
+
 Sidekiq.configure_server do |config|
   config.redis = { url: $sidekiq[:service] }
 end
