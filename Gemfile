@@ -13,13 +13,13 @@ group :assets do
 end
 
 group :development, :test, :travis do
-  gem 'sqlite3'
   gem 'spring'
 end
 
 group :development do
   gem 'thin'
   gem 'annotate'
+  gem 'pg'
 end
 
 group :development, :test do
@@ -31,6 +31,7 @@ group :test, :travis do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'sqlite3'
 end
 
 group :production, :staging do
