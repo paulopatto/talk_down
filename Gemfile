@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '4.2.7'
+gem 'rails', '~> 4.2.9'
 
 gem 'simple_form'
 gem 'text'
