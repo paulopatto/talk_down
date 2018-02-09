@@ -10,6 +10,10 @@ env:
   # https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
   - RAILS_ENV=test
 
+services:
+  - docker
+  - redis
+
 before_install:
   - "gem update --system"
   - "gem pristine bundler"
