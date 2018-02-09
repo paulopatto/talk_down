@@ -23,4 +23,4 @@ Rode o comando `bundle install` para instalar as gems do projeto e depois você 
 **Build**
 
 - [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=master)](https://travis-ci.org/paulopatto/talk_down) :master
-- [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=development)](https://travis-ci.org/paulopatto/talk_down) :development
+- [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=staging)](https://travis-ci.org/paulopatto/talk_down) :staging
