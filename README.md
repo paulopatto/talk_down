@@ -1,5 +1,10 @@
 # TalkDown
 
+
+**Build**
+
+- Master: [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=master)](https://travis-ci.org/paulopatto/talk_down)  | Staging: [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=staging)](https://travis-ci.org/paulopatto/talk_down)
+
 > Foi o projeto de teste desenvolvido no meu processo seletivo quando entrei no R7.com
 
 ## Montando o projeto para desenvolver
@@ -19,8 +24,3 @@ Rode o comando `bundle install` para instalar as gems do projeto e depois você 
 ### Rodando o projeto em modo desenvolvimento
 
 - `bundle exec spring rails server`
-
-**Build**
-
-- [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=master)](https://travis-ci.org/paulopatto/talk_down) :master
-- [![Build Status](https://travis-ci.org/paulopatto/talk_down.svg?branch=staging)](https://travis-ci.org/paulopatto/talk_down) :staging
