@@ -24,12 +24,19 @@ group :development, :test do
   gem 'pry-meta'
   gem 'pry-rails'
   gem 'sqlite3'
+  gem 'spring'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'poltergeist'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'selenium-webdriver' #, '3.2.2'
   gem 'shoulda-matchers'
+  gem 'simple_bdd'
 end
 
 group :production, :staging do
