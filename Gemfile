@@ -8,6 +8,7 @@ gem 'kaminari'
 gem 'react-rails'
 gem 'sidekiq'
 gem 'state_machines-activerecord'
+gem 'sqreen'
 
 group :assets do
   gem 'uglifier'
