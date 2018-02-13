@@ -24,3 +24,8 @@ Rode o comando `bundle install` para instalar as gems do projeto e depois você 
 ### Rodando o projeto em modo desenvolvimento
 
 - `bundle exec spring rails server`
+
+
+<a title="Realtime application protection" href="https://www.sqreen.io/?utm_source=badge">
+  <img style="width:109px;height:36px" src="https://s3-eu-west-1.amazonaws.com/sqreen-assets/badges/20171107/sqreen-dark-badge.svg" alt="Sqreen | Runtime Application Protection" />
+</a>
